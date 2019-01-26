@@ -14,6 +14,10 @@ public abstract class CrabBehavior
     public virtual void OnUpdate()
     {
         player.transform.position += new Vector3(Input.GetAxis("Horizontal") * player.moveSpeed * Time.deltaTime, 0, 0);
+        if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
+        {
+            player.GetComponent<Animator>().speed = Mathf.Abs(Input.GetAxis("Horizontal"));
+        }
     }
 
     public virtual void OnMoveLeft()
@@ -28,7 +32,10 @@ public abstract class CrabBehavior
 
     public virtual void OnJump()
     {
-        player.Jump();
+        if(player.isGrounded)
+        {
+            player.Jump();
+        }
     }
 
     public virtual void OnPressUp()
@@ -37,6 +44,11 @@ public abstract class CrabBehavior
     }
 
     public virtual void OnPressDown()
+    {
+
+    }
+
+    public virtual void OnHitGround()
     {
 
     }

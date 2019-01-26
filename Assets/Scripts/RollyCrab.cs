@@ -16,13 +16,4 @@ public class RollyCrab : CrabBehavior
         player.GetComponent<Rigidbody2D>().freezeRotation = false;
         player.ChangeBehavior(new RollyCrabTucked(player));
     }
-
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
-        if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
-        {
-            player.GetComponent<Animator>().speed = Mathf.Abs(Input.GetAxis("Horizontal"));
-        }
-    }
 }

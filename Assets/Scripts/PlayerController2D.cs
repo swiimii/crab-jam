@@ -9,7 +9,7 @@ public class PlayerController2D : MonoBehaviour
     public Sprite tucked, walking, standing;
 
     private const float baseJumpForce = 80;
-    private bool isTucked = false, isGrounded = true;
+    public bool isGrounded = true;
 
     private CrabBehavior behavior;
 
@@ -38,7 +38,7 @@ public class PlayerController2D : MonoBehaviour
         {
             behavior.OnPressDown();
         }
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump"))
         {
             behavior.OnJump();
         }
@@ -57,6 +57,7 @@ public class PlayerController2D : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            behavior.OnHitGround();
         }
     }
 
