@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController2D : MonoBehaviour
+public class LegacyPlayerController : MonoBehaviour
 {
     public float moveSpeed, jumpHeight;
     public Camera cam;
@@ -21,12 +21,12 @@ public class PlayerController2D : MonoBehaviour
     {
         if (!isTucked)
         {
-            
+
             var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
 
             var rb = GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(move.x * moveSpeed, rb.velocity.y);
-            
+
             //GetComponent<Rigidbody2D>().AddForce(new Vector2(moveSpeed * Input.GetAxis("Horizontal"), 0));
             if (GetComponent<SpriteRenderer>().sprite == walking)
             {
@@ -55,7 +55,7 @@ public class PlayerController2D : MonoBehaviour
         }
 
         else if (isTucked)
-        { 
+        {
 
             if (Input.GetButton("Jump") && isGrounded == true)
             {
@@ -63,7 +63,7 @@ public class PlayerController2D : MonoBehaviour
             }
             else if (Input.GetAxis("Vertical") > 0)
             {
-                 UnTuck();
+                UnTuck();
             }
         }
     }
@@ -83,7 +83,7 @@ public class PlayerController2D : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = tucked;
         var rb = GetComponent<Rigidbody2D>();
         isTucked = true;
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y );
+        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y);
         GetComponent<Rigidbody2D>().freezeRotation = false;
     }
 
@@ -120,7 +120,7 @@ public class PlayerController2D : MonoBehaviour
 
 
 }
-        
-    
+
+
 
 
