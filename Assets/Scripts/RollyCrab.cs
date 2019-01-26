@@ -19,6 +19,7 @@ public class RollyCrab : CrabBehavior
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
         if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
         {
             player.GetComponent<Animator>().speed = Mathf.Abs(Input.GetAxis("Horizontal"));
