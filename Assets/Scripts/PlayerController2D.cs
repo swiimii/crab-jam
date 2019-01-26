@@ -7,8 +7,8 @@ public class PlayerController2D : MonoBehaviour
     public float moveSpeed, jumpHeight;
     public Camera cam;
     public Sprite tucked, walking, standing;
-
-    private const float baseJumpForce = 80;
+    
+    private const float baseJumpForce = 2;
     public bool isGrounded = true;
 
     private CrabBehavior behavior;
@@ -46,7 +46,11 @@ public class PlayerController2D : MonoBehaviour
     
     public void Jump()
     {
+        /*
         GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpHeight * baseJumpForce);
+        isGrounded = false;
+        */
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight * baseJumpForce);
         isGrounded = false;
     }
 

@@ -13,7 +13,9 @@ public abstract class CrabBehavior
 
     public virtual void OnUpdate()
     {
-        player.transform.position += new Vector3(Input.GetAxis("Horizontal") * player.moveSpeed * Time.deltaTime, 0, 0);
+        var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        var rb = player.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(move.x * player.moveSpeed, rb.velocity.y);
         if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
         {
             player.GetComponent<Animator>().speed = Mathf.Abs(Input.GetAxis("Horizontal"));
