@@ -8,7 +8,7 @@ public class PlayerController2D : MonoBehaviour
     public Camera cam;
     public Sprite tucked, walking, standing;
 
-    private float baseJumpForce = 80;
+    private const float baseJumpForce = 80;
     private bool isTucked = false, isGrounded = true;
 
     private CrabBehavior behavior;
