@@ -16,6 +16,11 @@ public class RollyCrabTucked : CrabBehavior
         // Do nothing
     }
 
+    public override void OnUpdate()
+    {
+        // Do nothing
+    }
+   
     public override void OnPressUp()
     {
         //Untuck
