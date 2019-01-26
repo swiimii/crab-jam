@@ -18,7 +18,7 @@ public abstract class CrabBehavior
         rb.velocity = new Vector2(move.x * player.moveSpeed, rb.velocity.y);
         if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
         {
-            player.GetComponent<Animator>().speed = Mathf.Abs(Input.GetAxis("Horizontal"));
+            player.GetComponent<Animator>().speed = player.isGrounded ? Mathf.Abs(Input.GetAxis("Horizontal")) : 0;
         }
     }
 

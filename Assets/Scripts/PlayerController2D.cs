@@ -15,7 +15,7 @@ public class PlayerController2D : MonoBehaviour
 
     void Start()
     {
-        ChangeBehavior(new RollyCrab(this));
+        ChangeBehavior(new DoubleJumpCrab(this));
     }
 
     // Update is called once per frame
