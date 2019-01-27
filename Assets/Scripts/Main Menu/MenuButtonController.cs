@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtonController : MonoBehaviour
 {
-    public void BeginGame()
+    public Canvas[] menus;
+    public void BeginGame(int i)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(i);
     }
 
     public void QuitGame()
@@ -18,5 +19,21 @@ public class MenuButtonController : MonoBehaviour
     public void SelectLevel()
     {
         //select level screen
+    }
+
+    public void SwitchMenu(int menuIndex)
+    {
+        for(int i = 0; i < menus.Length; i ++)
+        {
+            if( i == menuIndex)
+            {
+                menus[i].enabled = true;
+
+            }
+            else
+            {
+                menus[i].enabled = false;
+            }
+        }
     }
 }
