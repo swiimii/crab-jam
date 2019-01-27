@@ -13,12 +13,12 @@ public abstract class CrabBehavior
 
     public virtual void OnUpdate()
     {
-        var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        var move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
         var rb = player.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(move.x * player.moveSpeed, rb.velocity.y);
         if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
         {
-            player.GetComponent<Animator>().speed = player.isGrounded ? Mathf.Abs(Input.GetAxis("Horizontal")) : 0;
+            player.GetComponent<Animator>().speed = player.isGrounded ? Mathf.Abs(Input.GetAxisRaw("Horizontal")) : 0;
         }
     }
 
