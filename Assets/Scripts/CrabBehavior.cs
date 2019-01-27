@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CrabBehavior : MonoBehaviour
+public abstract class CrabBehavior
 {
     internal PlayerController2D player;
 

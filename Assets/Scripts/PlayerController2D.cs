@@ -5,17 +5,18 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     public float moveSpeed, jumpHeight;
+    public Camera cam;
     public Sprite tucked, walking, standing;
     
     private const float baseJumpForce = 2;
     public bool isGrounded = true;
 
-    public CrabBehavior behavior;
+    private CrabBehavior behavior;
 
-    //void Start()
-   //{
-
-   // }
+    void Start()
+    {
+        ChangeBehavior(new DoubleJumpCrab(this));
+    }
 
     // Update is called once per frame
     void Update()
