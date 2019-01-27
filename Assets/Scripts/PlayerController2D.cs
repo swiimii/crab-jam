@@ -46,10 +46,7 @@ public class PlayerController2D : MonoBehaviour
     
     public void Jump()
     {
-        /*
-        GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpHeight * baseJumpForce);
-        isGrounded = false;
-        */
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight * baseJumpForce);
         isGrounded = false;
     }
