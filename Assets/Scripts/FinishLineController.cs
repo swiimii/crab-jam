@@ -7,11 +7,22 @@ public class FinishLineController : MonoBehaviour
 {
     public int nextLevel;
 
-    private void OnCollisionEnter(Collision collision)
+   
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(nextLevel);
         }
     }
+
+    /*
+    private void OnTriggerEnter2(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
+    }
+    //*/
 }
