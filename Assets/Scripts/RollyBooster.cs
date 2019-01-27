@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBooster : MonoBehaviour
+public class RollyBooster : MonoBehaviour
 {
     public GameObject player;
     public Vector2 boostingVelocity;
