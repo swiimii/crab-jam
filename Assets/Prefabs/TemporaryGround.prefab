@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2981000221386705504}
   - component: {fileID: 2981000221386705507}
   m_Layer: 0
-  m_Name: TemporaryGround
+  m_Name: Temporary Ground (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

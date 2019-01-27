@@ -24,12 +24,18 @@ public abstract class CrabBehavior
 
     public virtual void OnMoveLeft()
     {
-        player.GetComponent<SpriteRenderer>().flipX = true;
+        if(player.isGrounded)
+        {
+            player.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public virtual void OnMoveRight()
     {
-        player.GetComponent<SpriteRenderer>().flipX = false;
+        if(player.isGrounded)
+        {
+            player.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     public virtual void OnJump()
