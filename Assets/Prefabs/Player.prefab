@@ -53,6 +53,7 @@ MonoBehaviour:
   tucked: {fileID: 21300000, guid: 875ecc8daebd19340b5ef6648c0c574a, type: 3}
   walking: {fileID: 21300000, guid: 28d9407223aed5642931d546b5f46af6, type: 3}
   standing: {fileID: 21300000, guid: 14c4a53be59b7c7438d528b4203df418, type: 3}
+  isGrounded: 1
 --- !u!212 &633065021028639183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,7 +114,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
