@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/forest_1.unity
     guid: 18f238e7ac4332542a314d507c23da69
+  - enabled: 1
+    path: Assets/Scenes/KatherineScene.unity
+    guid: a3858ac0e6d76f94aad65225ffe2435d
   m_configObjects: {}

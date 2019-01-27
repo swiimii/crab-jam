@@ -16,11 +16,6 @@ public class MenuButtonController : MonoBehaviour
         Application.Quit();
     }
 
-    public void SelectLevel()
-    {
-        //select level screen
-    }
-
     
     public void SwitchMenu(int menuIndex)
     {
