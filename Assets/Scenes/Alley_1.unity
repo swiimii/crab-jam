@@ -1618,6 +1618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 516385848275483476, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 516385848275483474, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3344,7 +3349,7 @@ GameObject:
   - component: {fileID: 1264004908}
   m_Layer: 0
   m_Name: pop
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4322,6 +4327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 516385848275483476, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 516385848275483474, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
         type: 3}
@@ -5493,6 +5503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 516385848275483476, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 516385848275483474, guid: cfedfc3ba1f93ff40b125aa40863fa7d,
         type: 3}
