@@ -7,11 +7,15 @@ public class Wind : MonoBehaviour
     public string[] effectedTags;
     public float windSpeed;
     public bool isBlowing = false;
-    public float interval, windDuration, accelerationFactor ;
+    public float interval, windDuration ;
+    public AudioSource audioSource;
+    
 
+    private float accelerationFactor = .15f;
     private int direction = 1;
     private double timeCounter;
-    
+
+
 
     private void Update()
     {
@@ -20,9 +24,11 @@ public class Wind : MonoBehaviour
         //Check if it's time to add wind again. If so, add wind
         if ( !isBlowing && timeCounter > interval)
         {
+
             AddWind(windSpeed);
             timeCounter = 0;
             isBlowing = true;
+            audioSource.Play();
         }
 
         //if wind is blowing, accelerate effected objects
@@ -37,6 +43,9 @@ public class Wind : MonoBehaviour
             timeCounter = 0;
             isBlowing = false;
             direction *= -1;
+            audioSource.Pause();
+            audioSource.panStereo *= -1;
+            
         }
 
     }
