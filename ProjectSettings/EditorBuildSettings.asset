@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 114193359856ed144af6c33c6029f5b2
+  - enabled: 1
+    path: Assets/Scenes/dank_scenes.unity
+    guid: d7d52768804deb94aa5144e98fe6fbc8
+  - enabled: 1
+    path: Assets/Scenes/Alley_1.unity
+    guid: 85289e4b0ec072c4a8d76691bb45da91
+  - enabled: 1
+    path: Assets/Scenes/forest_1.unity
+    guid: 18f238e7ac4332542a314d507c23da69
   m_configObjects: {}
