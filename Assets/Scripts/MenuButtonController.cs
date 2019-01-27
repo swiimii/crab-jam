@@ -21,19 +21,25 @@ public class MenuButtonController : MonoBehaviour
         //select level screen
     }
 
+    
     public void SwitchMenu(int menuIndex)
     {
+
+        
+        
         for(int i = 0; i < menus.Length; i ++)
         {
             if( i == menuIndex)
             {
-                menus[i].enabled = true;
+                menus[i].gameObject.SetActive(true);
 
             }
             else
             {
-                menus[i].enabled = false;
+                menus[i].gameObject.SetActive(false);
             }
         }
+       
     }
+    
 }
