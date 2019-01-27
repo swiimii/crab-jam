@@ -22,10 +22,15 @@ public class PlayerController2D : MonoBehaviour
         {
             behavior = new DoubleJumpCrab(this);
         }
+        else if (defaultBehavior == "Multi")
+        {
+            behavior = new MultiJumpCrab(this, 3);
+        }
         else
         {
             behavior = new CrabBehavior(this);
         }
+
     }
 
     // Update is called once per frame
