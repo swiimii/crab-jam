@@ -17,4 +17,19 @@ public class RollyCrabTucked : CrabBehavior
         rb.velocity *= .3f;
         player.ChangeBehavior(new RollyCrab(player));
     }
+
+    public override void OnUpdate()
+    {
+
+    }
+
+    public override void OnMoveLeft()
+    {
+
+    }
+
+    public override void OnMoveRight()
+    {
+
+    }
 }

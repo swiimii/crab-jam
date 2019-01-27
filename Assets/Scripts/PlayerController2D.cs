@@ -11,11 +11,22 @@ public class PlayerController2D : MonoBehaviour
     public bool isGrounded = true;
 
     public CrabBehavior behavior;
-
-    //void Start()
-   //{
-
-   // }
+    public string defaultBehavior;
+    void Start()
+    {
+        if (defaultBehavior == "Rolly")
+        {
+            behavior = new RollyCrab(this);
+        }
+        else if (defaultBehavior == "Double")
+        {
+            behavior = new DoubleJumpCrab(this);
+        }
+        else
+        {
+            behavior = new CrabBehavior(this);
+        }
+    }
 
     // Update is called once per frame
     void Update()

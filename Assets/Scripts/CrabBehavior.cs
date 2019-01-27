@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CrabBehavior : MonoBehaviour
+public class CrabBehavior
 {
     internal PlayerController2D player;
 
@@ -14,7 +14,7 @@ public abstract class CrabBehavior : MonoBehaviour
     public virtual void OnUpdate()
     {
         var move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
-        var rb = player.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(move.x * player.moveSpeed, rb.velocity.y);
         if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
         {
