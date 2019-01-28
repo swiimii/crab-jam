@@ -5,21 +5,6 @@ using UnityEngine;
 public class RollyCrabTucked : CrabBehavior
 {
     public RollyCrabTucked(PlayerController2D player) : base(player) { }
-
-    public override void OnMoveLeft()
-    {
-        // Do nothing
-    }
-
-    public override void OnMoveRight()
-    {
-        // Do nothing
-    }
-
-    public override void OnUpdate()
-    {
-        // Do nothing
-    }
    
     public override void OnPressUp()
     {
@@ -31,5 +16,20 @@ public class RollyCrabTucked : CrabBehavior
         rb.freezeRotation = true;
         rb.velocity *= .3f;
         player.ChangeBehavior(new RollyCrab(player));
+    }
+
+    public override void OnUpdate()
+    {
+
+    }
+
+    public override void OnMoveLeft()
+    {
+
+    }
+
+    public override void OnMoveRight()
+    {
+
     }
 }

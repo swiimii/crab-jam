@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CrabBehavior
+public class CrabBehavior
 {
     internal PlayerController2D player;
 
@@ -13,22 +13,37 @@ public abstract class CrabBehavior
 
     public virtual void OnUpdate()
     {
-        player.transform.position += new Vector3(Input.GetAxis("Horizontal") * player.moveSpeed * Time.deltaTime, 0, 0);
+        var move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(move.x * player.moveSpeed, rb.velocity.y);
+        if(player.GetComponent<SpriteRenderer>().sprite == player.walking)
+        {
+            player.GetComponent<Animator>().speed = player.isGrounded ? Mathf.Abs(Input.GetAxisRaw("Horizontal")) : 0;
+        }
     }
 
     public virtual void OnMoveLeft()
     {
-        player.GetComponent<SpriteRenderer>().flipX = true;
+        if(player.isGrounded)
+        {
+            player.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public virtual void OnMoveRight()
     {
-        player.GetComponent<SpriteRenderer>().flipX = false;
+        if(player.isGrounded)
+        {
+            player.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     public virtual void OnJump()
     {
-        player.Jump();
+        if(player.isGrounded)
+        {
+            player.Jump();
+        }
     }
 
     public virtual void OnPressUp()
@@ -37,6 +52,11 @@ public abstract class CrabBehavior
     }
 
     public virtual void OnPressDown()
+    {
+
+    }
+
+    public virtual void OnHitGround()
     {
 
     }
